@@ -1,0 +1,44 @@
+{
+  "name": "md-resume",
+  "version": "0.1.0",
+  "description": "Convert a markdown resume to html",
+  "main": "md-resume.js",
+  "bin": {
+    "mkresume": "./bin/mkresume.js"
+  },
+  "scripts": {
+    "generate": "./bin/mkresume.js",
+    "watch": "watch 'npm run generate' ./source ./theme",
+    "start": "parallelshell 'http-server ./public' 'npm run watch'"
+  },
+  "author": {
+    "name": "Alex Chao",
+    "email": "alexchao1990@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Alex1990/md-resume.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alex1990/md-resume/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "front-matter": "^1.0.0",
+    "http-server": "^0.8.0",
+    "lodash": "^3.10.0",
+    "marked": "^0.3.3",
+    "parallelshell": "^1.2.0",
+    "through2": "^2.0.0",
+    "vinyl-fs": "^1.0.0",
+    "watch": "^0.16.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2"
+  },
+  "keywords": [
+    "markdown",
+    "resume"
+  ]
+}
